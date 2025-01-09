@@ -2,7 +2,7 @@ import { Widget } from "./components/Widget";
 import ReactDom from "react-dom/client";
 
 export const normalizeAttribute = (attribute) => {
-    return attribute.repl(/-([a-z])/g, (_, letter) => 
+    return attribute.replace(/-([a-z])/g, (_, letter) => 
         letter.toUpperCase());
 }
 
